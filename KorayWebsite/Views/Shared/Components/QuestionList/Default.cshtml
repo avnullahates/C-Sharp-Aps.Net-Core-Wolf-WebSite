@@ -1,0 +1,33 @@
+﻿@using EntityLayer.Concrete
+@model List<Question>
+
+<div class="container">
+
+    <div class="section-title">
+        <h2 data-aos="fade-in">Sık Sorulan Sorular</h2>
+    </div>
+
+
+
+    @foreach (var item in Model)
+    {
+
+        @if (item.Status == true)
+        {
+            <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up">
+                <div class="col-lg-5">
+                    <i class="bx bx-help-circle"></i>
+                    <h4>@item.Title</h4>
+                </div>
+                <div class="col-lg-7">
+                    <p>
+                        @item.Questionq
+                    </p>
+                </div>
+            </div>
+        }
+
+        <!-- End F.A.Q Item-->
+    }
+
+</div>

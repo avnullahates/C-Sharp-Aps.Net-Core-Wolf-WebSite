@@ -1,0 +1,23 @@
+﻿@using EntityLayer.Concrete
+@model List<Reference>
+
+<div class="container">
+
+    <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
+        @foreach (var item in Model)
+        {
+            @if (item.Status == true)
+            {
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="client-logo">
+                        <img src="@item.ImageUrl" class="img-fluid" alt="@item.TitleCompany" data-aos="flip-right">
+                    </div>
+                </div>
+            }
+
+
+        }
+
+    </div>
+
+</div>

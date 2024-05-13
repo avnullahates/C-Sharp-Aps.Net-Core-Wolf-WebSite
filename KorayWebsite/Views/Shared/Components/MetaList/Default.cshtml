@@ -1,0 +1,15 @@
+﻿@using EntityLayer.Concrete
+@model List<Meta>
+
+@foreach (var item in Model)
+{
+    <meta charset="@item.Charset">
+    <meta name="viewport" content="@item.Viewport">
+
+    <title>@item.Title</title>
+    <meta name="description" content="@item.Description">
+    <meta name="keywords" content="@item.Keyword">
+    <meta name="robots" content="@item.Robots" />
+    <link rel="canonical" href="@item.LinkCanonical" />
+
+}

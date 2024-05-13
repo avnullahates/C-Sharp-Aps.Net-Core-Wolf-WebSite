@@ -1,0 +1,25 @@
+﻿@using EntityLayer.Concrete
+@model List<Service>
+
+
+@foreach (var item in Model)
+{
+    string titleTrimed = item.DescriptionTitle.Replace(" ", "-");
+    @if (item.Status == true)
+    {
+        <div class="col-md-6 d-flex" data-aos="fade-right">
+            <div class="card">
+                <div class="card-img">
+                    <img src="@item.ImageUrl" alt="...">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title"><a href="/services/@item.Id">@item.DescriptionTitle</a></h5>
+
+                    <p class="card-text"> @item.ImageDescription</p>
+
+                </div>
+            </div>
+        </div>
+    }
+
+}

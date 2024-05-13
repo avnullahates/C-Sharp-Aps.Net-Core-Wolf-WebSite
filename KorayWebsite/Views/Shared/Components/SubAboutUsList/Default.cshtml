@@ -1,0 +1,19 @@
+﻿@using EntityLayer.Concrete
+@model List<SubAboutUs>
+
+<div class="row gy-4 mt-3">
+
+    @foreach (var item in Model)
+    {
+
+        @if (item.Status)
+        {
+            <div class="col-md-6 icon-box" data-aos="fade-up">
+                <i class="bx @item.IconUrl"></i>
+                <h4><a href="@item.HrefLink">@item.Title</a></h4>
+                <p>@item.Description</p>
+            </div>
+        }
+
+    }
+</div>

@@ -1,0 +1,16 @@
+﻿@using EntityLayer.Concrete
+@model List<AboutUs>
+
+
+@foreach (var item in Model)
+{
+    @if (item.Status == true)
+    {
+        <h3 data-aos="fade-in" data-aos-delay="100">@item.Title</h3>
+        <p data-aos="fade-in">
+            @item.Description
+        </p>
+    }
+
+
+}

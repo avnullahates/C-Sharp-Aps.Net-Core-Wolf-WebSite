@@ -1,0 +1,44 @@
+﻿@using EntityLayer.Concrete
+@model List<Feature>
+
+@foreach (var item in Model)
+{
+    <div class="row content">
+        <div class="col-md-5" data-aos="fade-right">
+            <img src="@item.ImageUrl" class="img-fluid" alt="">
+        </div>
+        <div class="col-md-7 pt-4" data-aos="fade-left">
+            <h3>@item.Title</h3>
+            <p class="fst-italic">
+                @item.Description
+            </p>
+            <ul>
+
+                @if (item.Item1 != null)
+                {
+                   <li><i class="bi bi-check"></i> @item.Item1</li>  
+                }
+
+                @if (item.Item2 != null)
+                {
+                    <li><i class="bi bi-check"></i> @item.Item2</li>
+                }
+
+                @if (item.Item3 != null)
+                {
+                    <li><i class="bi bi-check"></i> @item.Item3</li>
+                } 
+                
+                @if (item.Item4 != null)
+                {
+                    <li><i class="bi bi-check"></i> @item.Item4</li>
+                }
+                
+            
+               
+               
+
+            </ul>
+        </div>
+    </div>
+}

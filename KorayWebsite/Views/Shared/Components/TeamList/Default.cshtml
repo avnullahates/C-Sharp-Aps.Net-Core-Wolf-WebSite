@@ -1,0 +1,50 @@
+﻿@using EntityLayer.Concrete
+@model List<Team>
+<div class="container">
+    <div class="section-title">
+        <h2 data-aos="fade-in">Takım</h2>
+    </div>
+
+    <div class="row">
+
+
+
+        @foreach (var item in Model)
+        {
+            @if (item.Status == true)
+            {
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="member" data-aos="fade-up" data-aos-delay="@item.Delay">
+                        <div class="pic"><img src="@item.PictureUrl" alt=""></div>
+                        <h4>@item.Name @item.Surname</h4>
+                        <span>@item.Title</span>
+                        <div class="social">
+                            @if (item.TwitterLink != null)
+                            {
+                                <a href="@item.TwitterLink"><i class="bi bi-twitter"></i></a>
+                            }
+                            @if (item.FacebookLink != null)
+                            {
+                                <a href="@item.FacebookLink"><i class="bi bi-facebook"></i></a>
+                            }
+                            @if (item.InstagramLink != null)
+                            {
+                                <a href="@item.InstagramLink"><i class="bi bi-instagram"></i></a>
+                            }
+                            @if (item.LinkedInLink != null)
+                            {
+                                <a href="@item.LinkedInLink"><i class="bi bi-linkedin"></i></a>
+                            }
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+            }
+
+        }
+    </div>
+
+</div>
